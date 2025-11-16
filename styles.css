@@ -16,10 +16,19 @@ body {
 
 /* HERO SECTION (EL FOCO PRINCIPAL) */
 .hero {
-    background-color: #0d1a2f; /* Azul oscuro profundo */
+    /* Fondo con gradiente animado para un look más dinámico */
+    background: linear-gradient(-45deg, #0d1a2f, #1a3a6d, #0d1a2f, #1a3a6d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: white;
     padding: 40px 0 60px;
     text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .tag-oferta {
@@ -286,6 +295,76 @@ h2, h3, h4 {
 .faq-item .answer {
     padding-left: 15px;
     color: #b0c4de;
+}
+
+/* ============================================== */
+/* SECCIÓN DE MUESTRA GRATIS */
+/* ============================================== */
+.sample-section {
+    background-color: #0d1a2f; /* Mismo fondo que el hero para consistencia */
+    padding: 50px 0;
+    text-align: center;
+    border-top: 2px solid #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+.sample-section h2 {
+    color: white;
+    font-size: 2.2em;
+}
+
+.sample-description {
+    font-size: 1.2em;
+    color: #b0c4de;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.sample-button {
+    display: inline-block;
+    background-color: #ffc107; /* Amarillo de acento */
+    color: #121212; /* Texto oscuro para contraste */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.sample-button:hover {
+    transform: scale(1.05);
+    background-color: #ffd54f;
+}
+
+/* ============================================== */
+/* ANIMACIONES DE ENTRADA */
+/* ============================================== */
+.animate-on-load {
+    opacity: 0; /* Empieza invisible */
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+}
+
+.fade-in-down {
+    animation-name: fadeInDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+}
+
+.fade-in-up {
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* FOOTER */

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Establecer la hora final: 24 horas a partir del momento en que el usuario visita la página
     const now = new Date().getTime();
-    const futureDate = now + (24 * 60 * 60 * 1000); // 24 horas en milisegundos
+    const futureDate = now + (2.1 * 60 * 60 * 1000); // 24 horas en milisegundos
 
     const updateCountdown = () => {
         const now = new Date().getTime();
